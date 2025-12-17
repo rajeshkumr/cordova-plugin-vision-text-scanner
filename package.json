@@ -23,5 +23,13 @@
     "platforms": [
       "ios"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeshkumr/cordova-plugin-vision-text-scanner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rajeshkumr/cordova-plugin-vision-text-scanner/issues"
+  },
+  "homepage": "https://github.com/rajeshkumr/cordova-plugin-vision-text-scanner#readme"
 }
