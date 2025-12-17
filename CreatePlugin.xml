@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-vision-text-scanner"
+    version="1.0.0">
+    
+    <name>Vision Text Scanner</name>
+    <description>Cordova plugin for text detection using Apple VisionKit</description>
+    <license>MIT</license>
+    <keywords>cordova,vision,ocr,text,scanner,visionkit</keywords>
+    
+    <engines>
+        <engine name="cordova" version=">=9.0.0"/>
+        <engine name="cordova-ios" version=">=6.0.0"/>
+    </engines>
+    
+    <!-- JavaScript Interface -->
+    <js-module src="www/VisionTextScanner.js" name="VisionTextScanner">
+        <clobbers target="cordova.plugins.VisionTextScanner" />
+    </js-module>
+    
+    <!-- iOS Platform -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="VisionTextScanner">
+                <param name="ios-package" value="VisionTextScanner"/>
+            </feature>
+        </config-file>
+        
+        <!-- Camera Permission -->
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>This app needs camera access to scan text from images</string>
+        </config-file>
+        
+        <!-- Photo Library Permission -->
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+            <string>This app needs photo library access to scan text from images</string>
+        </config-file>
+        
+        <!-- Source Files -->
+        <header-file src="src/ios/VisionTextScanner.h" />
+        <source-file src="src/ios/VisionTextScanner.m" />
+        
+        <!-- Frameworks -->
+        <framework src="Vision.framework" />
+        <framework src="VisionKit.framework" />
+        <framework src="UIKit.framework" />
+        
+        <!-- iOS Deployment Target -->
+        <preference name="deployment-target" value="13.0" />
+    </platform>
+</plugin>

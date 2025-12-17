@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-vision-text-scanner",
+  "version": "1.0.0",
+  "description": "Cordova plugin for text detection using Apple VisionKit",
+  "main": "www/VisionTextScanner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cordova",
+    "vision",
+    "ocr",
+    "text",
+    "scanner",
+    "visionkit",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "cordova": {
+    "id": "cordova-plugin-vision-text-scanner",
+    "platforms": [
+      "ios"
+    ]
+  }
+}
